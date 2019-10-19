@@ -9,7 +9,7 @@ var app = express();
 var smtpTransport = nodemailer.createTransport({
 	service: 'Gmail',
 	auth: {
-		user: "info@idiscover.me",
+		user: "info.idiscoverme@gmail.com",
 		pass: "MandeepR123"
 	}
 });
@@ -32,7 +32,7 @@ exports.custom_mail = function (data, callback) {
 		data.to = [data.to, 'pranam@idiscover.me'];
 
 	mailOptions = {
-		from: '"iDiscover.me" info@idiscover.me',
+		from: '"iDiscover.me" info.idiscoverme@gmail.com',
 		bcc: data.to,
 		subject: data.subject,
 		html: data.html
@@ -59,7 +59,7 @@ exports.lost_details = function (data, callback) {
 	//console.log(link);
 
 	mailOptions = {
-		from: '"iDiscover.me" info@idiscover.me',
+		from: '"iDiscover.me" info.idiscoverme@gmail.com',
 		to: data.username,
 		subject: "iDiscover.me | Request for Password Change",
 		html: 'Hello,<br><br> Please click on the link to change your password. This link is only valid for <b>one</b> hour.<br><a href=' + link + '>Click Here to Change Your Password</a>'
